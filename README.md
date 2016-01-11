@@ -4,4 +4,4 @@ To run, you'll need to install Python, wxPython and Pyclipper library. The minim
 
 Files in folder "old" are old or experimental versions of main code. They can be ignored. 
 
-"gerber files" folder contain test gerber files (.gbl), test edge files (.gml) and Excellon drill files (.txt). 
+"gerber files" folder contain test gerber files (.gbl, .gtl), test edge files (.gml) and Excellon drill files (.txt). 
