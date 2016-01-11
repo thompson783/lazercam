@@ -1,0 +1,25 @@
+Changes:
+ - Grey out empty layers in layer viewer
+ - Order of layers is now repeating sequence of [tracks, regions, pads, boundaries]
+ - Boundary layer always rendered as dark even when it's a clear layer (to aid troubleshooting)
+ - Added loading of drill files
+ - Used paths for rendering layers - hole rendering is now correct
+ - Aperture macros:
+     - Apertures macros with clear flags now work correctly
+     - Implemented macro primitives 1, 20, 21 and 22
+     - Fixed subtle filling bug for apertures - all apertures created must be CCW - outline
+       primitive (4) will reverse points automatically to ensure this is true
+     - Implemented macro variables and expressions
+         Note: It is unclear whether variables are reset between AD commands - current
+         implementation is that they stick until overridden - either by macro or macro parameter
+     - All aperture macros should be fully implemented now EXCEPT for the moire and thermal primitives
+         >> Testing is still required!
+     - Fixed bug when parsing macro comments (0)
+
+Todo:
+ - Step and repeat (SR)
+ - Check conversion is correct when drill file with different unit from gerber file is loaded
+ See source file for more
+
+ Bugs:
+  - Clicking on whitespace of layers checkboxes will set to wrong value for some reason

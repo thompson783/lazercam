@@ -1,0 +1,54 @@
+%FSLAX34Y34*%
+%AMRECT*
+21,1,$1,$2-$3-$3,-$4,-$5,0*%
+%ADD10C,0.00590551X0.00450551*%
+%ADD14RECT,0.0807087X0.1023622X0.0118110X0.5000000X0.3000000*%
+%AMTARGET*
+1,1,$1,0,0*
+$1=$1x0.8*
+1,0,$1,0,0*
+$1=$1x0.8*
+1,1,$1,0,0*
+$1=$1x0.8*
+1,0,$1,0,0*
+$1=$1x0.8*
+1,1,$1,0,0*
+$1=$1x0.8*
+1,0,$1,0,0*%
+%ADD15TARGET,0.020*%
+%AMRECTROUNDCORNERS*
+0 Rectangle with rounded corners. *
+0 Offsets $4 and $5 are interpreted as the *
+0 offset of the flash origin from the pad center. *
+0 First create horizontal rectangle. *
+21,1,$1,$2-$3-$3,-$4,-$5,0*
+0 From now on, use width and height half-sizes. *
+$10=$1/2*
+$9=$10*
+$8=$2/2*
+0 Add top and bottom rectangles. *
+22,1,$1-$3-$3,$3,-$9+$3-$4,$8-$3-$5,0*
+22,1,$1-$3-$3,$3,-$9+$3-$4,-$8-$5,0*
+0 Add circles at the corners. *
+1,1,$3+$3,-$4+$9-$3,-$5+$8-$3*
+1,1,$3+$3,-$4-$9+$3,-$5+$8-$3*
+1,1,$3+$3,-$4-$9+$3,-$5-$8+$3*
+1,1,$3+$3,-$4+$9-$3,-$5-$8+$3*%
+%ADD16RECTROUNDCORNERS,1X1X0.2X0X0*%
+G74*
+D10*
+X1100Y600D02*
+G03*
+X700Y1000I400J0D01*
+X300Y600I0J400D01*
+X700Y200I400J0D01*
+X1100Y600I0J400D01*
+X300D02*
+G01*
+X1100D01*
+X700Y200D02*
+Y1000D01*
+D15*
+X2100Y600D03*
+D16*
+X-10100Y600D03*
